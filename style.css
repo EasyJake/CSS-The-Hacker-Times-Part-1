@@ -1,42 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
-/* Importing fonts */
+/* Importing necessary fonts to avoid default Times New Roman font. */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
 
-/* General styles */
+/* GENERAL STYLES */
+
+/* Setting the main background to a light gray color as per acceptance criteria. */
 body {
-  background: #222; /* Dark gray background */
+  background: #eee;
+  /* Using a custom font to ensure text isn't displayed in the default Times New Roman font. */
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   font-weight: 200;
-  color: #888; /* Light gray text color */
 }
 
+/* Removing underlines from links to enhance readability and aesthetics. */
 a {
   text-decoration: none;
-  color: #33aaff; /* Cyberpunk blue link color */
 }
 
+/* Adjusting paragraph text appearance for improved readability. */
 p {
   font-size: 0.9em;
   text-align: justify;
   padding: 0 10px;
 }
 
-/* Container for newspaper content */
+/* CONTAINER STYLES */
+
+/* All newspaper content is held within this white container. */
 .newspaper-container {
   width: 700px;
   margin: 3em auto;
   padding: 1em;
   box-sizing: border-box;
   border-radius: 10px;
-  background: #111; /* Darker gray container background */
-  box-shadow: 1px 1px 5px #555; /* Darker box shadow */
+  background: white;  /* Ensuring the background of the container is white. */
+  box-shadow: 1px 1px 5px #ddd;
 }
 
-/* Header styles */
+/* HEADER STYLES */
+
+/* Adjusting the font-size for date. */
 .date {
   font-size: 0.8em;
 }
 
+/* Styling the main newspaper title. */
 header h1 {
   font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
@@ -44,75 +51,155 @@ header h1 {
   text-align: center;
 }
 
-/* Navigation bar styles */
+/* NAVIGATION STYLES */
+
+/* Styling the navigation bar. */
 nav {
-  border-top: 1px solid #555; /* Darker border color */
-  border-bottom: 1px solid #555; /* Darker border color */
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   padding: 5px 0;
   margin: 1em 0;
-  /* Removed position: sticky; and top properties */
-  background: #111; /* Darker navigation background */
+  position: sticky;
+  top: 0;
+  background: white;
 }
 
+/* Removing the bullet points from navigation items. */
 nav ul {
   list-style: none;
   margin: 0;
 }
 
+/* Displaying the navigation items side-by-side. */
 nav li {
   display: inline-block;
   padding: 0 0.5em;
 }
 
+/* Styling the navigation links. */
 nav a {
   font-size: 0.8em;
-  color: #33aaff; /* Cyberpunk blue link color */
+  color: #777;
 }
 
-/* Styles for the front-page article */
+/* FRONT PAGE ARTICLE STYLES */
+
+/* Adjusting the front-page article title appearance. */
 main h2 {
   font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-bottom: 0;
 }
 
+/* Adjusting the sub-header or description font and color. */
 main h5 {
   font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #aa2727; /* Darker red text color */
+  color: #dd3232;
   margin-top: 0.5em;
 }
 
+/* Ensuring the image takes the full width of its container. */
 main img {
   width: 100%;
 }
 
-/* Styles for smaller articles section */
+/* SMALLER ARTICLES STYLES */
+
+/* Adjustments for the smaller articles' section. */
 .more-articles {
-  border-top: 1px solid #555; /* Darker border color */
+  border-top: 1px solid #eee;
   margin-top: 1.5em;
   text-align: center;
 }
 
+/* Displaying the smaller articles side-by-side. */
 .more-articles section {
   display: inline-block;
   width: 44%;
   margin: 0 1em;
 }
 
+/* Making sure images in smaller articles are full-width. */
 .more-articles img {
   width: 100%;
 }
 
+/* Adjusting the titles of the smaller articles. */
 .more-articles h4 {
   font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: left;
 }
+/* ... previous CSS ... */
 
-/* Gradient text color for dark background */
-.gradient-text {
-  background: linear-gradient(90deg, #222, #444);
-  -webkit-background-clip: text;
-  color: transparent;
-  display: inline-block;
-  font-size: 1.2em;
-  margin-top: 0.5em;
-}
+/* EDITOR-IN-CHIEF DECISIONS */
+
+/* New articles section, as the editor-in-chief wanted space for more articles.
+   Considered using CSS grid for a more modern and flexible layout. */
+   .three-article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;  /* Spacing between articles */
+    margin-top: 1.5em;
+  }
+  
+  /* Styling for individual articles in the grid. */
+  .three-article-grid article {
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #ddd;
+  }
+  
+  /* Images in these articles should be full-width. */
+  .three-article-grid img {
+    width: 100%;
+  }
+  
+  /* Titles of the articles in the new section. */
+  .three-article-grid h3 {
+    font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  /* Adding a footer inspired by other newspaper sites, as instructed by the editor.
+     Typically, footers in newspaper sites contain links and metadata about the newspaper itself. */
+  footer {
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    margin-top: 2em;
+    background: #2a2a2a;
+    color: white;
+  }
+  
+  /* Layout for footer links. */
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Displaying footer links in a row. */
+  footer li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  
+  /* Styling footer links for aesthetics and readability. */
+  footer a {
+    color: white;
+    font-size: 0.8em;
+  }
+  
+  /* Hover effect for footer links for improved user experience. */
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* New York Times inspiration:
+     The New York Times site uses a lot of negative space, clean lines, and a classic look. 
+     We try to reflect that in the overall design, as well as the typographic choices and the layout.
+     
+     */
+  
+
+
+
