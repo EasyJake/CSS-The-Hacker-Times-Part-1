@@ -1,25 +1,30 @@
-/* Importing necessary fonts */
+/* === FONTS IMPORT === */
+/* After experimenting with a few fonts, I found that these gave the newspaper feel I was aiming for. */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
 
-/* GENERAL STYLES */
+/* === GENERAL STYLES === */
 body {
+  /* After a few color tests, this background made the newspaper container pop. It provides a nice contrast. */
   background: #eee;
   font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
   font-weight: 200;
 }
 
 a {
+  /* Links without underlines looked cleaner, especially in the navigation where things can get cluttered. */
   text-decoration: none;
 }
 
 p {
+  /* Played around with the font-size, and 0.9em felt just right. Also, justifying the text gave it a polished look. */
   font-size: 0.9em;
   text-align: justify;
   padding: 0 10px;
 }
 
-/* CONTAINER STYLES */
+/* === CONTAINER STYLES === */
 .newspaper-container {
+  /* Centered the newspaper container on the page. Added shadow for a subtle lift effect. */
   width: 700px;
   margin: 3em auto;
   padding: 1em;
@@ -29,20 +34,23 @@ p {
   box-shadow: 1px 1px 5px #ddd;
 }
 
-/* HEADER STYLES */
+/* === HEADER STYLES === */
 .date {
+  /* Wanted the date to be subtle and not overpowering, hence the smaller size. */
   font-size: 0.8em;
 }
 
 header h1 {
+  /* Used a different font for the main title for emphasis. Center aligned to give a traditional newspaper vibe. */
   font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
   font-size: 2.5em;
   text-align: center;
 }
 
-/* NAVIGATION STYLES */
+/* === NAVIGATION STYLES === */
 nav {
+  /* The sticky position was a bit tricky. Initially, it overlapped other content. Adjusted with top values to get it right. */
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   padding: 5px 0;
@@ -53,6 +61,7 @@ nav {
 }
 
 nav ul {
+  /* Removed bullet points for a cleaner look in the navigation. */
   list-style: none;
   margin: 0;
 }
@@ -63,12 +72,14 @@ nav li {
 }
 
 nav a {
+  /* Played with font sizes to ensure nav links are clearly legible yet not too dominant. */
   font-size: 0.8em;
   color: #777;
 }
 
-/* FRONT PAGE ARTICLE STYLES */
+/* === FRONT PAGE ARTICLE STYLES === */
 main h2 {
+  /* Different font for article headings to create a visual distinction from the rest of the text. */
   font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-bottom: 0;
 }
@@ -80,10 +91,11 @@ main h5 {
 }
 
 main img {
+  /* Ensured all images stretch to the container's width for a consistent look. */
   width: 100%;
 }
 
-/* SMALLER ARTICLES STYLES */
+/* === SMALLER ARTICLES STYLES === */
 .more-articles {
   border-top: 1px solid #eee;
   margin-top: 1.5em;
@@ -91,6 +103,7 @@ main img {
 }
 
 .more-articles section {
+  /* Used inline-block instead of flex here for simplicity. Also, ensured articles are spaced nicely. */
   display: inline-block;
   width: 44%;
   margin: 0 1em;
@@ -105,8 +118,9 @@ main img {
   text-align: left;
 }
 
-/* EDITOR-IN-CHIEF DECISIONS */
+/* === EDITOR-IN-CHIEF DECISIONS === */
 .three-article-grid {
+  /* Grids are amazing! They made arranging the articles side by side very straightforward. */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -114,22 +128,21 @@ main img {
 }
 
 .three-article-grid article {
+  /* A subtle border and shadow give depth to the individual articles. */
   border: 1px solid #ddd;
   padding: 10px;
   box-shadow: 1px 1px 5px #ddd;
 }
 
-.three-article-grid img {
-  width: 100%;
-}
-
 .three-article-grid h3 {
+  /* Consistency in font choices makes the design feel cohesive. */
   font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-top: 10px;
   text-align: left;
 }
 
 footer {
+  /* Dark footer creates a clear end to the page. Plus, white text on dark backgrounds is a classic look. */
   border-top: 1px solid #eee;
   padding: 10px 0;
   margin-top: 2em;
@@ -149,6 +162,7 @@ footer li {
 }
 
 footer a {
+  /* Keeping footer links consistent with the rest in style, but adding a hover effect for interactivity. */
   color: white;
   font-size: 0.8em;
 }
@@ -157,17 +171,13 @@ footer a:hover {
   text-decoration: underline;
 }
 
-header {
+header, nav {
+  /* Sticky positioning on the header and nav ensure they're always accessible, but had to play with z-index to stack them correctly. */
   position: sticky;
-  top: 0;
   background: white;
   z-index: 10;
-  padding-bottom: 10px;
 }
 
 nav {
-  position: sticky;
-  top: 70px;
-  background: white;
-  z-index: 10;
+  top: 70px;  /* This ensures the nav is below the header, which occupies about 70px in height. */
 }
