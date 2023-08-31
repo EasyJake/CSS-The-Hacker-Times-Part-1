@@ -1,183 +1,139 @@
-/* === FONTS IMPORT === */
-/* After experimenting with a few fonts, I found that these gave the newspaper feel I was aiming for. */
+/* Importing custom fonts from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
 
-/* === GENERAL STYLES === */
+/* GENERAL STYLES */
+
+/* Setting background color, font family, and font weight for the entire page */
 body {
-  /* After a few color tests, this background made the newspaper container pop. It provides a nice contrast. */
-  background: #eee;
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-  font-weight: 200;
+  background: #eee; /* Light gray background color */
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; /* Primary font family with fallbacks */
+  font-weight: 200; /* Light font weight */
 }
 
+/* Removing underlines from all hyperlinks */
 a {
-  /* Links without underlines looked cleaner, especially in the navigation where things can get cluttered. */
-  text-decoration: none;
+  text-decoration: none; /* No underline for links */
 }
 
+/* Styling for all paragraphs */
 p {
-  /* Played around with the font-size, and 0.9em felt just right. Also, justifying the text gave it a polished look. */
-  font-size: 0.9em;
-  text-align: justify;
-  padding: 0 10px;
+  font-size: 0.9em; /* Font size slightly smaller than default */
+  text-align: justify; /* Text spreads to fit the full width of its container */
+  padding: 0 10px; /* Padding on left and right sides */
 }
 
-/* === CONTAINER STYLES === */
+/* CONTAINER STYLES */
+
+/* Styling the primary container for the newspaper content */
 .newspaper-container {
-  /* Centered the newspaper container on the page. Added shadow for a subtle lift effect. */
-  width: 700px;
-  margin: 3em auto;
-  padding: 1em;
-  box-sizing: border-box;
-  border-radius: 10px;
-  background: white;
-  box-shadow: 1px 1px 5px #ddd;
+  width: 700px; /* Set width */
+  margin: 3em auto; /* Centered with 3em space top and bottom */
+  padding: 1em; /* Space inside the container */
+  box-sizing: border-box; /* Border and padding are included in element's total width and height */
+  border-radius: 10px; /* Rounded corners */
+  background: white; /* White background color */
+  box-shadow: 1px 1px 5px #ddd; /* Shadow effect for depth */
 }
 
-/* === HEADER STYLES === */
+/* HEADER STYLES */
+
+/* Making the header sticky and applying general styles */
+header {
+  position: sticky; /* Making the header sticky */
+  top: 0; /* It will stick to the top */
+  z-index: 1000; /* Ensuring it's above other content */
+  background: white; /* Adding a background to ensure readability */
+  padding: 10px 0; /* Some padding for aesthetics */
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+}
+
+/* Styling the date inside the header */
 .date {
-  /* Wanted the date to be subtle and not overpowering, hence the smaller size. */
-  font-size: 0.8em;
+  font-size: 0.82em;   /* Adjusted font size */
 }
 
+/* Styling the main title inside the header */
 header h1 {
-  /* Used a different font for the main title for emphasis. Center aligned to give a traditional newspaper vibe. */
-  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin: 0;
-  font-size: 2.5em;
-  text-align: center;
+  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
+  margin: 0; /* Removing default margin */
+  font-size: 2.5em; /* Setting font size */
+  text-align: center; /* Center aligning text */
 }
 
-/* === NAVIGATION STYLES === */
+/* NAVIGATION STYLES */
+
+/* Styling the navigation bar */
 nav {
-  /* The sticky position was a bit tricky. Initially, it overlapped other content. Adjusted with top values to get it right. */
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  padding: 5px 0;
-  margin: 1em 0;
-  position: sticky;
-  top: 0;
-  background: white;
+  border-top: 1px solid #eee; /* Top border */
+  border-bottom: 1px solid #eee; /* Bottom border */
+  padding: 5px 0; /* Padding top and bottom */
+  margin: 1em 0; /* Space outside the nav, top and bottom */
+  position: sticky; /* Making navigation sticky */
+  top: 70px; /* Adjusted to be below the header */
+  background: white; /* White background for readability */
 }
 
+/* Removing bullet points from navigation list */
 nav ul {
-  /* Removed bullet points for a cleaner look in the navigation. */
-  list-style: none;
-  margin: 0;
+  list-style: none; /* No bullet points */
+  margin: 0; /* No default margin */
 }
 
+/* Displaying navigation list items in a row */
 nav li {
-  display: inline-block;
-  padding: 0 0.5em;
+  display: inline-block; /* Display items side-by-side */
+  padding: 0 0.5em; /* Padding on left and right */
 }
 
+/* Styling navigation links */
 nav a {
-  /* Played with font sizes to ensure nav links are clearly legible yet not too dominant. */
-  font-size: 0.8em;
-  color: #777;
+  font-size: 0.8em; /* Smaller font size */
+  color: #777; /* Gray color for links */
 }
 
-/* === FRONT PAGE ARTICLE STYLES === */
+/* FRONT PAGE ARTICLE STYLES */
+
+/* Styling the main article title */
 main h2 {
-  /* Different font for article headings to create a visual distinction from the rest of the text. */
-  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-bottom: 0;
+  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
+  margin-bottom: 0; /* Removing space below the title */
 }
 
+/* Styling the subtitle in the main article */
 main h5 {
-  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: #dd3232;
-  margin-top: 0.5em;
+  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
+  color: #dd3232; /* Custom red color */
+  margin-top: 0.5em; /* Adding space above the subtitle */
 }
 
+/* Making images in main article span the full width of their container */
 main img {
-  /* Ensured all images stretch to the container's width for a consistent look. */
-  width: 100%;
+  width: 100%; /* Full width */
 }
 
-/* === SMALLER ARTICLES STYLES === */
+/* SMALLER ARTICLES STYLES */
+
+/* Separator and layout styling for smaller articles */
 .more-articles {
-  border-top: 1px solid #eee;
-  margin-top: 1.5em;
-  text-align: center;
+  border-top: 1px solid #eee; /* Top border for separation */
+  margin-top: 1.5em; /* Space above the section */
+  text-align: center; /* Center aligning content */
 }
 
+/* Styling individual smaller articles */
 .more-articles section {
-  /* Used inline-block instead of flex here for simplicity. Also, ensured articles are spaced nicely. */
-  display: inline-block;
-  width: 44%;
-  margin: 0 1em;
+  display: inline-block; /* Displaying articles side-by-side */
+  width: 44%; /* Almost half width, leaving space for margins */
+  margin: 0 1em; /* Space on left and right sides */
 }
 
+/* Making images in smaller articles span the full width of their container */
 .more-articles img {
-  width: 100%;
+  width: 100%; /* Full width */
 }
 
+/* Styling the titles in smaller articles */
 .more-articles h4 {
-  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: left;
-}
-
-/* === EDITOR-IN-CHIEF DECISIONS === */
-.three-article-grid {
-  /* Grids are amazing! They made arranging the articles side by side very straightforward. */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 1.5em;
-}
-
-.three-article-grid article {
-  /* A subtle border and shadow give depth to the individual articles. */
-  border: 1px solid #ddd;
-  padding: 10px;
-  box-shadow: 1px 1px 5px #ddd;
-}
-
-.three-article-grid h3 {
-  /* Consistency in font choices makes the design feel cohesive. */
-  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  margin-top: 10px;
-  text-align: left;
-}
-
-footer {
-  /* Dark footer creates a clear end to the page. Plus, white text on dark backgrounds is a classic look. */
-  border-top: 1px solid #eee;
-  padding: 10px 0;
-  margin-top: 2em;
-  background: #2a2a2a;
-  color: white;
-}
-
-footer ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-footer a {
-  /* Keeping footer links consistent with the rest in style, but adding a hover effect for interactivity. */
-  color: white;
-  font-size: 0.8em;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-header, nav {
-  /* Sticky positioning on the header and nav ensure they're always accessible, but had to play with z-index to stack them correctly. */
-  position: sticky;
-  background: white;
-  z-index: 10;
-}
-
-nav {
-  top: 70px;  /* This ensures the nav is below the header, which occupies about 70px in height. */
+  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
+  text-align: left; /* Left-aligning titles */
 }
