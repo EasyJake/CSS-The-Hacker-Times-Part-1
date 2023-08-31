@@ -3,137 +3,136 @@
 
 /* GENERAL STYLES */
 
-/* Setting background color, font family, and font weight for the entire page */
 body {
-  background: #eee; /* Light gray background color */
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif; /* Primary font family with fallbacks */
-  font-weight: 200; /* Light font weight */
+  background: linear-gradient(to bottom, #f9f9f9, #eee); /* Added gradient */
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-weight: 300; /* Increased font weight for better readability */
+  color: #333; /* Slightly darker text color for better contrast */
 }
 
-/* Removing underlines from all hyperlinks */
 a {
-  text-decoration: none; /* No underline for links */
+  text-decoration: underline; /* Underlined links for differentiation */
+  transition: color 0.3s; /* Smooth color transition */
 }
 
-/* Styling for all paragraphs */
+a:hover {
+  color: #dd3232; /* Link color on hover */
+}
+
 p {
-  font-size: 0.9em; /* Font size slightly smaller than default */
-  text-align: justify; /* Text spreads to fit the full width of its container */
-  padding: 0 10px; /* Padding on left and right sides */
+  font-size: 1em; /* Slightly bigger text for better readability */
+  text-align: justify;
+  padding: 0 10px;
 }
 
 /* CONTAINER STYLES */
 
-/* Styling the primary container for the newspaper content */
 .newspaper-container {
-  width: 700px; /* Set width */
-  margin: 3em auto; /* Centered with 3em space top and bottom */
-  padding: 1em; /* Space inside the container */
-  box-sizing: border-box; /* Border and padding are included in element's total width and height */
-  border-radius: 10px; /* Rounded corners */
-  background: white; /* White background color */
-  box-shadow: 1px 1px 5px #ddd; /* Shadow effect for depth */
+  width: 700px;
+  max-width: 90%; /* Allows for better responsiveness on larger screens */
+  margin: 3em auto;
+  padding: 2em; /* Increased padding for a spacious feel */
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: #fffef8; /* Light off-white for a warm feel */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow */
 }
 
 /* HEADER STYLES */
 
-/* Making the header sticky and applying general styles */
 header {
-  position: sticky; /* Making the header sticky */
-  top: 0; /* It will stick to the top */
-  z-index: 1000; /* Ensuring it's above other content */
-  background: white; /* Adding a background to ensure readability */
-  padding: 10px 0; /* Some padding for aesthetics */
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  padding: 15px 0; /* Increased padding for a taller header */
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* More pronounced shadow for differentiation */
 }
 
-/* Styling the date inside the header */
 .date {
-  font-size: 0.82em;   /* Adjusted font size */
+  font-size: 0.82em;
+  color: #888; /* Grayish color for differentiation */
 }
 
-/* Styling the main title inside the header */
 header h1 {
-  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
-  margin: 0; /* Removing default margin */
-  font-size: 2.5em; /* Setting font size */
-  text-align: center; /* Center aligning text */
+  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  font-size: 2.8em; /* Increased size for more prominence */
+  text-align: center;
+  border-bottom: 1px solid #ddd; /* Added a subtle border underneath for separation */
+  padding-bottom: 10px; /* Padding to space the border from the text */
 }
 
 /* NAVIGATION STYLES */
 
-/* Styling the navigation bar */
 nav {
-  border-top: 1px solid #eee; /* Top border */
-  border-bottom: 1px solid #eee; /* Bottom border */
-  padding: 5px 0; /* Padding top and bottom */
-  margin: 1em 0; /* Space outside the nav, top and bottom */
-  position: sticky; /* Making navigation sticky */
-  top: 70px; /* Adjusted to be below the header */
-  background: white; /* White background for readability */
+  border-top: 2px solid #eee; /* Thicker border for prominence */
+  border-bottom: 2px solid #eee;
+  padding: 10px 0; /* Increased padding for a taller nav bar */
+  margin: 1em 0;
+  position: sticky;
+  top: 70px;
+  background: white;
+  text-transform: uppercase; /* Navigation text in uppercase for style */
 }
 
-/* Removing bullet points from navigation list */
 nav ul {
-  list-style: none; /* No bullet points */
-  margin: 0; /* No default margin */
+  list-style: none;
+  margin: 0;
 }
 
-/* Displaying navigation list items in a row */
 nav li {
-  display: inline-block; /* Display items side-by-side */
-  padding: 0 0.5em; /* Padding on left and right */
+  display: inline-block;
+  padding: 0 0.8em; /* Increased padding for more space between nav items */
 }
 
-/* Styling navigation links */
 nav a {
-  font-size: 0.8em; /* Smaller font size */
-  color: #777; /* Gray color for links */
+  font-size: 0.9em; /* Increased font size for better readability */
+  color: #777;
 }
 
 /* FRONT PAGE ARTICLE STYLES */
 
-/* Styling the main article title */
 main h2 {
-  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
-  margin-bottom: 0; /* Removing space below the title */
+  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 0;
+  font-size: 2.8em; /* Slightly bigger for more prominence */
 }
 
-/* Styling the subtitle in the main article */
 main h5 {
-  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
-  color: #dd3232; /* Custom red color */
-  margin-top: 0.5em; /* Adding space above the subtitle */
+  font-family: 'Abril Fatface', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #dd5555; /* A slightly lighter shade of red */
+  margin-top: 0.5em;
 }
 
-/* Making images in main article span the full width of their container */
 main img {
-  width: 100%; /* Full width */
+  width: 100%;
+  border-radius: 8px; /* Rounded edges for images */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for images for a pop-out effect */
 }
 
 /* SMALLER ARTICLES STYLES */
 
-/* Separator and layout styling for smaller articles */
 .more-articles {
-  border-top: 1px solid #eee; /* Top border for separation */
-  margin-top: 1.5em; /* Space above the section */
-  text-align: center; /* Center aligning content */
+  border-top: 2px solid #eee; /* Slightly thicker border for differentiation */
+  margin-top: 2em; /* Increased space for better separation */
+  text-align: center;
 }
 
-/* Styling individual smaller articles */
 .more-articles section {
-  display: inline-block; /* Displaying articles side-by-side */
-  width: 44%; /* Almost half width, leaving space for margins */
-  margin: 0 1em; /* Space on left and right sides */
+  display: inline-block;
+  width: 44%;
+  margin: 0 1.5em; /* Increased margin for more space between articles */
 }
 
-/* Making images in smaller articles span the full width of their container */
 .more-articles img {
-  width: 100%; /* Full width */
+  width: 100%;
+  border-radius: 8px; /* Consistent with the main image style */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Consistent with the main image style */
 }
 
-/* Styling the titles in smaller articles */
 .more-articles h4 {
-  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Custom font with fallbacks */
-  text-align: left; /* Left-aligning titles */
+  font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left;
+  font-size: 1.4em; /* Increased font size for better readability */
 }
