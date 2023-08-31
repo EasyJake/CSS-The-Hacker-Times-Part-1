@@ -39,7 +39,7 @@ p {
 /* HEADER STYLES */
 
 header {
-  position: sticky;  /* Keep the header at the top of the viewport while scrolling */
+  position: sticky;  /* Keep the header at the top of the viewport while scrolling. This keeps breaking and I don;t know why. */
   top: 0;  /* Stick to the top */
   z-index: 1000;  /* Ensure header stays on top of other elements */
   background: white;  /* White background to ensure content readability */
@@ -124,3 +124,6 @@ main img {
 .more-articles h4 {
   font-family: 'Roboto Slab', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  /* Same slab font for consistency */
   text-align: left;  /* Align
+
+
+  
